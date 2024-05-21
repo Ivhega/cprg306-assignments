@@ -76,7 +76,6 @@ export default function ItemList() {
 
   return (
     <main>
-      <h1 className="text-2xl">Items List</h1>
 
       <Item item={item1} />
       <Item item={item2} />
