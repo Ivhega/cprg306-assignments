@@ -24,14 +24,14 @@ export default function NewItem() {
   return (
     <div className="flex item-center justify-center text-red-300 bg-slate-800 border border-cyan-100 mx-10 m-10 p-5">
       <form onSubmit={handleSubmit}>
-        <div>
-            <input type="text" value={name} onChange={(event) => setName(event.target.value)} placeholder="Enter item name" required/>
+        <div className="block mb-4">
+            <input className="block mt-1 p-1 w-full rounded-sm text-black bg-blue-100 focus:bg-white" type="text" value={name} onChange={(event) => setName(event.target.value)} placeholder="Enter item name" required/>
         </div>
-        <div>
-            <input type="number" value={quantity} onChange={(event) => setQuantity(Number(event.target.value))} min="1" max="99" required/>
+        <div className="block mb-4">
+            <input className="block mt-1 p-1 w-full rounded-sm text-black bg-blue-100 focus:bg-white" type="number" value={quantity} onChange={(event) => setQuantity(Number(event.target.value))} min="1" max="99" required/>
         </div>
-        <div>
-            <select value={category} onChange={(event) => setCategory(event.target.value)} required>
+        <div className="block mb-4">
+            <select className="block mt-1 p-1 w-full rounded-sm text-black bg-blue-100 focus:bg-white" value={category} onChange={(event) => setCategory(event.target.value)} required>
               <option value="produce">Produce</option>
               <option value="dairy">Dairy</option>
               <option value="bakery">Bakery</option>
@@ -45,7 +45,7 @@ export default function NewItem() {
               <option value="other">Other</option>
             </select>
         </div>
-        <button type="submit">Add Item</button>
+        <button className="w-full py-2 px-4 rounded-sm bg-blue-600 hover:bg-blue-400 text-white" type="submit">Add Item</button>
       </form>
     </div>
   );
