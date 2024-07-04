@@ -15,7 +15,7 @@ export default function Page() {
   };
 
   const handleItemSelect = (item) => {
-    const cleanedName = item.name.split(',')[0].replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|[\u2011-\u26FF])/g, '').trim();
+    const cleanedName = item.name.split(',')[0].replace(/[\p{Emoji_Presentation}\p{Emoji}\p{Extended_Pictographic}]/gu, '').trim();
     setSelectedItemName(cleanedName);
   };
 
